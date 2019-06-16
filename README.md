@@ -1,8 +1,8 @@
-# look into ssl traffic
+# generic way to look into ssl traffic (hooking libssl library calls and dumping the key)
 
 credits: https://security.stackexchange.com/questions/80158/extract-pre-master-keys-from-an-openssl-application
 
-## LD_PRELOAD
+## the LD_PRELOAD way
 ### How to 
 1. cc sslkeylog.c -shared -o libsslkeylog.so -fPIC -ldl 
 2. sudo tcpdump -i any port 443 -w out
